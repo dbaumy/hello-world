@@ -119,3 +119,6 @@ H O M E W O R K   2:
      users are there, 'pull' the changes to your local master (12.1.1)
 
 DO YOU REMEMBER? → delete GitBash-screen with "strg + l" (l like "löschen")
+
+PROBLEM WITH GIBASH AFTER "git log"? →  there is just 'END' or 'ESC' in the
+                                        command-line? ↔ press 'q'
