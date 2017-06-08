@@ -1,0 +1,121 @@
+1. Install GIT
+
+2. Basic settings of GIT (just one time to do)
+2.1 command:        git config --global
+2.2 overview:       git help config OR git config --help
+2.3 person/name:    git config --global user.name "Max Mustermann"
+2.4 email:          git config --global user.email "maxM@provider.com"
+2.5 Settings-view:  git config --list
+
+3. need help
+3.1 see 2.2
+3.2 general:        git help <verb> OR git <verb> --help
+3.3 verbs:          config, add, remove, init, list, commit, status,
+                    branch, checkout, diff...
+
+4. change working-directory (dir)
+4.1 current FILE:   ls
+4.1.1 all FIELs in dir: ls -la
+4.2 current dir:    pwd
+4.3 change:         cd /c/.../folderXY
+
+5. Start Working with GIT in the selected folder
+5.1 initialize GIT:     git init (git-folder will be created)
+5.2 check it out:       ls -la
+5.3 after check:        .git folder is displayed (it is a hidden folder)
+
+6. Ending with GIT in the selected folder
+6.1 just remove .git:   rm -rf .git
+
+7. information about the working-dir
+7.1 command:      git status
+7.1.1 branch:     it shows on which branch I work
+7.7.2 untracked:  this filed are actually not included for working with GIT
+7.2.2.1 add files:      git add <file>
+7.2.2.2 add all files:  git add -A (OR: git add .)
+7.2.2.3 add type of f.: git add *.<type> (e.g.: *.html or *.txt)
+
+8. Committing changes
+8.1 Changes, that we want to share on the remote repository have to adding to
+    the staging area before we can committing these changes. (see also point 10
+    for the architecture of GIT)
+8.8.1 see also Point 7.2.2.1:   git add <file> (changes to be committed
+8.2 changes commit: for a good order, we should have to do a commit for every
+    change
+8.2.1 command: git commit -m "COMMIT-MESSAGE"
+8.3 --Insert-- Mode
+8.3.1 when we forget the message (just run "git commit"), than we can see a
+      exception. Now we can press the I-button for starting the Insert-Mode
+      and complement the message.
+8.3.2 Lines starting with '#' will be ignored.
+8.4 exit the --Insert-- Mode and ending with the commit
+8.4.1 press 'ESC' an write ':wq'
+8.5 overview about commits
+8.5.1 command: git log
+
+9. protect sensitive data
+9.1 create a folder for your own data that can´t see other git-users
+9.1.1 command:  touch .gitignore
+9.2 ignore types of files in the .gitignore folder
+9.2.1 todo: just save the ending types in the folder
+9.2.2 e.g.: .txt ; *.ptx (*: all files of this type)
+9.2 check it out:   git status
+9.2.1 now the ignored files aren´t list by untracked files
+      but now, the .gitignored folder is listed
+
+10. GIT-Architecture
+10.1 Working Directory (WD); (local)
+10.1.1 here are the changed, untracked flies
+10.2 Staging Area (SA); (local)
+10.2.1 you safe here the fixes from the WD before committing
+10.3 .git directory (online)
+10.3.1 own fixes/changes that you want to share: commit
+
+11. branches (normally have all VCS branches)
+11.1 master branch
+11.1.1 (definition???)
+11.2 create other branches with a copy of the master branch to make just
+     changes on the new branch
+11.2.1 with the command 'git branch <branch-name>'
+11.3 switch to a branch
+11.3.1 command: git checkout <branch-name>
+
+H O M E W O R K   2:
+
+12. Git and GitHub (we are in git bash on our local machine)
+12.1 get new master-branch version from the remote repository (remote master)
+     to your 'local' machine (local master).
+12.1.1 command: pull origin master (now we have the newest version from GitHub
+       together with our changes)
+12.2 share our actually master version to GitHub
+12.2.1 command: push origin master
+12.3 example-code from gut bash after push (12.2.1)
+        Counting objects: 3, done.
+        Delta compression using up to 4 threads.
+        Compressing objects: 100% (2/2), done.
+        Writing objects: 100% (3/3), 331 bytes | 0 bytes/s, done.
+        Total 3 (delta 1), reused 0 (delta 0)
+        remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+        To https://github.com/dbaumy/hello-world.git
+        63657f8..5e2b127  master -> master
+12.4 An other command is, when I want to push an other branch (not the master
+     branch) to the remote repository. Maybe a branch named functions
+12.4.1 command: git push -u origin functions
+
+13. Merging branches and push it to the remote repository
+13.1 Remember what Branches We have
+13.1.1 command: git branch
+13.2 After creating a new branch (11.2.1) and making changes/commits on it...
+13.2.1  ...we can push this branch to the remote repository (12.4.1)
+13.2.2  ...and the changes are good, we can fusion the new and the master
+        branch (with the changes from the new branch)
+13.2.2.1  first, we go back to the master branch (11.3.1)
+13.2.2.2  then we 'merge' the new branch to the master branch with the
+          command "git merge <branch-name>"
+13.3 Actually the 'local master' branch have other contents like the 'remote
+     master'. So we can check with 'git branch -a', whether there has been
+     changes on the 'remote master'. Isn't so, now we can push the 'local
+     master' to the remote repository (12.2.1). If changes from other users are
+     there, 'pull' the changes to your local master (12.1.1)
+
+DO YOU REMEMBER? → delete GitBash-screen with "strg + l" (l like "löschen")
