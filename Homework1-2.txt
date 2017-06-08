@@ -100,7 +100,9 @@ H O M E W O R K   2:
         63657f8..5e2b127  master -> master
 12.4 An other command is, when I want to push an other branch (not the master
      branch) to the remote repository. Maybe a branch named functions
-12.4.1 command: git push -u origin functions
+12.4.1  command: git push -u origin functions
+        (The -u tells Git to remember the parameters, so that next time we can
+        simply run git push and Git will know what to do.)
 
 13. Merging branches and push it to the remote repository (on GitHub)
 13.1 Remember what Branches We have
