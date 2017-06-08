@@ -114,8 +114,8 @@ H O M E W O R K   2:
           command "git merge <branch-name>"
 13.3 Actually the 'local master' branch have other contents like the 'remote
      master'. So we can check with 'git branch -a', whether there has been
-     changes on the 'remote master'. Isn't so, now we can push the 'local
-     master' to the remote repository (12.2.1). If changes from other users are
-     there, 'pull' the changes to your local master (12.1.1)
+     changes on the 'remote master'. Already up-to-date? Now we can push the
+     'local master' to the remote repository (12.2.1). If changes from other
+     users are there, 'pull' the changes to your local master (12.1.1)
 
 DO YOU REMEMBER? → delete GitBash-screen with "strg + l" (l like "löschen")
