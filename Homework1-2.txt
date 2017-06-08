@@ -117,6 +117,8 @@ H O M E W O R K   2:
      changes on the 'remote master'. Already up-to-date? Now we can push the
      'local master' to the remote repository (12.2.1). If changes from other
      users are there, 'pull' the changes to your local master (12.1.1)
+13.4 Which branches we have merged in so far?
+13.4.1 command: git branch --merged
 
 DO YOU REMEMBER? → delete GitBash-screen with "strg + l" (l like "löschen")
 
