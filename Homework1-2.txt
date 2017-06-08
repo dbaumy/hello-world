@@ -102,7 +102,7 @@ H O M E W O R K   2:
      branch) to the remote repository. Maybe a branch named functions
 12.4.1 command: git push -u origin functions
 
-13. Merging branches and push it to the remote repository
+13. Merging branches and push it to the remote repository (on GitHub)
 13.1 Remember what Branches We have
 13.1.1 command: git branch
 13.2 After creating a new branch (11.2.1) and making changes/commits on it...
@@ -117,10 +117,18 @@ H O M E W O R K   2:
      changes on the 'remote master'. Already up-to-date? Now we can push the
      'local master' to the remote repository (12.2.1). If changes from other
      users are there, 'pull' the changes to your local master (12.1.1)
+
 13.4 Which branches we have merged in so far?
-13.4.1 command: git branch --merged
+13.4.1  command: git branch --merged
+13.5 Deleted branches from the remote repository
+13.5.1  command: git push origin --deleted <branch-name>
+13.6 Other commands
+13.6.1  listing remotes that branches we track: git remote
+13.6.2  We can also like on github.com cloning an project (if it is public):
+        git clone <url> (copy url from github.com/ by the green "Clone-Button")
 
 DO YOU REMEMBER? → delete GitBash-screen with "strg + l" (l like "löschen")
+                    or with the simple command "clear"
 
 PROBLEM WITH GIBASH AFTER "git log"? →  there is just 'END' or 'ESC' in the
                                         command-line? ↔ press 'q'
