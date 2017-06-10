@@ -89,7 +89,7 @@
        together with our changes)
 12.2 share our actually master version to GitHub
 12.2.1 command: push origin master
-12.3 example-code from gut bash after push (12.2.1)
+12.3 example-code from Git Bash after push (12.2.1)
         Counting objects: 3, done.
         Delta compression using up to 4 threads.
         Compressing objects: 100% (2/2), done.
