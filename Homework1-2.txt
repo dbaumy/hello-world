@@ -125,6 +125,7 @@
 13.5 Deleted branches from the remote repository
 13.5.1  command: git push origin --deleted <branch-name>
         "origin" is here the <remote-name> or <shortname> of the remote
+        the general command: "git push <remote-name> --deleted <branch-name>"
 
 14. REPO = Remote Repositories (the default shortname is origin)
 14.1  listing remotes that branches we track: "git remote"
@@ -135,10 +136,10 @@
 14.5  Rename a REPO: "git remote rename <old> <new>"
 14.6  Fetching any new work since cloning REPO: "git fetch <shortname>"
 14.7  Fetching from your local repository:  "git fetch"
-14.7.1  the git fetch command only downloads the data to your local repository –
-        it doesn’t automatically merge it with any of your work or modify what
-        you’re currently working on. You have to merge it manually into your
-        work when you’re ready.
+14.7.1  the git fetch command only downloads the data to your local repository
+        – it doesn’t automatically merge it with any of your work or modify
+        what you’re currently working on. You have to merge it manually into
+        your work when you’re ready.
 14.8  Inspecting a Remote: "git remote show <remote-name>"
       Show the result after run and read on.
 14.8.1  If you´re on the master branch: just run "git pull" for merging
